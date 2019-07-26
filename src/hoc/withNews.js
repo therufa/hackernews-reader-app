@@ -14,7 +14,7 @@ export default function withNews(WrappedComponent) {
       axios
         .get("https://hacker-news.firebaseio.com/v0/topstories.json")
         .then(result => {
-          const newsIDs = result.data.slice(0, 10);
+          const newsIDs = result.data.slice(0, 15);
           const news = [];
 
           newsIDs.forEach(element => {

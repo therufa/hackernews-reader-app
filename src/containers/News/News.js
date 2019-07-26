@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import withNews from '../../hoc/withNews';
 import NewsItem from '../../components/NewsItems/NewsItem';
+import "./News.css";
 
 class News extends Component {
     constructor(props) {
@@ -14,7 +15,7 @@ class News extends Component {
         );
         return (
             <>
-                <ul>
+                <ul className="NewsList">
                     {newsItems}
                 </ul>
             </>

@@ -1,0 +1,25 @@
+.PageNavBar {
+    height: 100px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.PageNavBar h1 {
+    display: inline;
+}
+
+.PageNavBar ul {
+    padding: 0;
+}
+
+.PageNavBar li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.PageNavBar a {
+    color: white;
+}

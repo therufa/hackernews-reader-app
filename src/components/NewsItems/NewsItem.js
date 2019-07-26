@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class NewsItem extends Component {
     render() {
         return (
-            <li>{this.props.item.title}</li>
+            <li><a href={"/"+this.props.item.id}>{this.props.item.title}</a></li>
         )
     }
 }
