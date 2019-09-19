@@ -32,7 +32,7 @@ export default class NewsView extends Component {
           <div>
             <h4>{this.state.news.title}</h4>
             <p>
-              <a href={this.state.news.url} target="_blank">[link]</a>
+              <a href={this.state.news.url} target="_blank" rel="noopener noreferrer">[link]</a>
             </p>
           </div>
         )}

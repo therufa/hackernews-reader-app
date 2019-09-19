@@ -13,22 +13,13 @@ export default function withNews(WrappedComponent) {
     componentDidMount() {
       axios
         .get("https://hacker-news.firebaseio.com/v0/topstories.json")
-        .then(result => {
-          const newsIDs = result.data.slice(0, 15);
-          const news = [];
-
-          newsIDs.forEach(element => {
+        .then(result => result.data.slice(0, 15))
+        .then(newsIDs => 
+          Promise.all(newsIDs.map(element => 
             axios.get(`https://hacker-news.firebaseio.com/v0/item/${element}.json`)
-            .then(result => {
-                console.log(result.data);
-                news.push(result.data);
-                this.setState({
-                  news: news
-                })
-            });
-          });
-
-        });
+              .then(response => response.data)
+          )))
+        .then(news => this.setState({ news }))
     }
 
     render() {
