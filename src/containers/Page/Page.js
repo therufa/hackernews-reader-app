@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import './Page.css';
 
 export default class Page extends Component {
@@ -8,7 +9,7 @@ export default class Page extends Component {
         <nav className="PageNavBar">
             <h1>HackerNews - {this.props.pageTitle} page</h1>
             <ul>
-                <li><a href="/">Home</a></li>
+                <li><Link to="/">Home</Link></li>
             </ul>
         </nav>
         <div>

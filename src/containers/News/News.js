@@ -11,7 +11,7 @@ class News extends Component {
 
     render() {
         const newsItems = this.props.news.map((element) =>
-            <NewsItem item={element}/>
+            <NewsItem item={element} key={element.title} />
         );
         return (
             <>
